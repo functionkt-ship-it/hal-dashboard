@@ -6,8 +6,9 @@
       "status": "進行中",
       "leadAi": "Codex",
       "updatedAt": "2026-07-30",
-      "nextAction": "ローカルで表示と検索を確認する",
+      "nextAction": "GitHub経由で各システムの更新を管理する",
       "notionUrl": "https://app.notion.com/p/3ac69ed9820981f5bd65db739a57a5e8",
+      "githubUrl": "https://github.com/functionkt-ship-it/hal-dashboard",
       "outputUrl": "index.html"
     },
     {
@@ -29,13 +30,25 @@
       "notionUrl": "https://app.notion.com/p/37469ed9820981fe9866c63599c188ad?pvs=1"
     },
     {
-      "name": "現金出納帳アプリ Phase 2",
-      "summary": "複数事業者に対応する現金出納帳アプリの、マルチテナント化計画。",
-      "status": "準備中",
+      "name": "CASH BOOK（現金出納帳）",
+      "summary": "ブラウザだけで動作し、JSONバックアップとCSV出力に対応する現金出納帳。",
+      "status": "公開中",
       "leadAi": "Codex",
-      "updatedAt": "2026-07-18",
-      "nextAction": "Phase 2のタスク分解を最終確認する",
-      "notionUrl": "https://app.notion.com/p/37b69ed9820981a68e8efe291637cdff?pvs=1"
+      "updatedAt": "2026-07-30",
+      "nextAction": "GitHubのIssueまたは修正依頼から改善する",
+      "notionUrl": "https://app.notion.com/p/37b69ed9820981a68e8efe291637cdff?pvs=1",
+      "githubUrl": "https://github.com/functionkt-ship-it/cashbook",
+      "outputUrl": "https://functionkt-ship-it.github.io/cashbook/"
+    },
+    {
+      "name": "MF会計風プロトタイプ",
+      "summary": "仕訳入力・帳簿・試算表・決算書をブラウザで確認できる会計入力プロトタイプ。",
+      "status": "公開中",
+      "leadAi": "Codex",
+      "updatedAt": "2026-07-30",
+      "nextAction": "GitHubのIssueまたは修正依頼から改善する",
+      "githubUrl": "https://github.com/functionkt-ship-it/mf-accounting-prototype",
+      "outputUrl": "https://functionkt-ship-it.github.io/mf-accounting-prototype/"
     },
     {
       "name": "合同会社ハイタッチ 3店舗目損益シミュレーション",
