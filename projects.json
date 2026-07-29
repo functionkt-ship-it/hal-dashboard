@@ -1,0 +1,50 @@
+{
+  "projects": [
+    {
+      "name": "HAL AI統合ダッシュボード v1.0",
+      "summary": "AI・業務システム・制作物を一つの入口から管理する、静的HTMLベースのランチャー。",
+      "status": "進行中",
+      "leadAi": "Codex",
+      "updatedAt": "2026-07-30",
+      "nextAction": "ローカルで表示と検索を確認する",
+      "notionUrl": "https://app.notion.com/p/3ac69ed9820981f5bd65db739a57a5e8",
+      "outputUrl": "index.html"
+    },
+    {
+      "name": "請求フロー改善",
+      "summary": "提案書・様式・売掛回収アプリをまとめ、請求から回収確認までの流れを整備する。",
+      "status": "進行中",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-24",
+      "nextAction": "売掛回収WEBアプリの引き継ぎ内容を確認する",
+      "notionUrl": "https://app.notion.com/p/39569ed98209811a8ea7f34fbe8445a9?pvs=1"
+    },
+    {
+      "name": "法人くんアプリ",
+      "summary": "決算書をもとに経営状態を見える化し、改善のための処方箋を提示するアプリ。",
+      "status": "レビュー待ち",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-23",
+      "nextAction": "PDF読み取りの実機テストを実施する",
+      "notionUrl": "https://app.notion.com/p/37469ed9820981fe9866c63599c188ad?pvs=1"
+    },
+    {
+      "name": "現金出納帳アプリ Phase 2",
+      "summary": "複数事業者に対応する現金出納帳アプリの、マルチテナント化計画。",
+      "status": "準備中",
+      "leadAi": "Codex",
+      "updatedAt": "2026-07-18",
+      "nextAction": "Phase 2のタスク分解を最終確認する",
+      "notionUrl": "https://app.notion.com/p/37b69ed9820981a68e8efe291637cdff?pvs=1"
+    },
+    {
+      "name": "合同会社ハイタッチ 3店舗目損益シミュレーション",
+      "summary": "10月の3店舗目展開に向け、売上・人件費・固定費を踏まえた損益を試算する。",
+      "status": "保留",
+      "leadAi": "ChatGPT",
+      "updatedAt": "2026-07-12",
+      "nextAction": "前提数値を確認してシミュレーションを更新する",
+      "notionUrl": "https://app.notion.com/p/39169ed982098173a0e6c20c40be9ef4?pvs=1"
+    }
+  ]
+}

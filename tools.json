@@ -1,0 +1,12 @@
+{
+  "tools": [
+    { "name": "ChatGPT", "category": "対話・企画・設計", "symbol": "C", "url": "https://chatgpt.com/" },
+    { "name": "Claude", "category": "長文読解・レビュー", "symbol": "A", "url": "https://claude.ai/" },
+    { "name": "Codex", "category": "実装・修正・テスト", "symbol": "⌘", "url": "https://chatgpt.com/codex" },
+    { "name": "Notion", "category": "情報・意思決定の正本", "symbol": "N", "url": "https://www.notion.so/" },
+    { "name": "GitHub", "category": "コードの正本", "symbol": "G", "url": "https://github.com/" },
+    { "name": "MoneyForward", "category": "会計・バックオフィス", "symbol": "M", "url": "https://biz.moneyforward.com/" },
+    { "name": "投資ダッシュボード", "category": "投資・株式関連", "symbol": "¥", "url": "https://www.google.com/finance/" },
+    { "name": "プロジェクト台帳", "category": "Notionで一元管理", "symbol": "▣", "url": "https://www.notion.so/" }
+  ]
+}
