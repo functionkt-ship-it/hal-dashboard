@@ -59,7 +59,7 @@
         <section class="command-strip" aria-label="全体検索">
           <label class="search-box" for="project-search">
             <span aria-hidden="true">⌕</span>
-            <input id="project-search" type="search" placeholder="プロジェクト・担当AI・ステータスを検索" autocomplete="off" />
+            <input id="project-search" type="search" placeholder="プロジェクト・担当AI・ステータス・所在を検索" autocomplete="off" />
             <kbd>/</kbd>
           </label>
           <a class="primary-button" href="https://www.notion.so" target="_blank" rel="noopener noreferrer">
@@ -111,6 +111,12 @@
                 <span class="sr-only">担当AI</span>
                 <select id="ai-filter">
                   <option value="all">すべてのAI</option>
+                </select>
+              </label>
+              <label>
+                <span class="sr-only">所在</span>
+                <select id="location-filter">
+                  <option value="all">すべての所在</option>
                 </select>
               </label>
             </div>
@@ -176,6 +182,7 @@
         <p class="project-summary"></p>
         <dl class="project-meta">
           <div><dt>主担当</dt><dd class="project-lead"></dd></div>
+          <div><dt>所在</dt><dd class="project-location"></dd></div>
           <div><dt>次のアクション</dt><dd class="project-next"></dd></div>
         </dl>
         <div class="project-links"></div>

@@ -4,6 +4,7 @@ const state = {
   query: "",
   status: "all",
   ai: "all",
+  location: "all",
 };
 
 const elements = {
@@ -11,6 +12,7 @@ const elements = {
   search: document.querySelector("#project-search"),
   statusFilter: document.querySelector("#status-filter"),
   aiFilter: document.querySelector("#ai-filter"),
+  locationFilter: document.querySelector("#location-filter"),
   projectGrid: document.querySelector("#project-grid"),
   projectCount: document.querySelector("#project-count"),
   projectTemplate: document.querySelector("#project-template"),
@@ -65,6 +67,11 @@ function makeLink(label, href) {
 function populateFilters() {
   const statuses = [...new Set(state.projects.map((project) => project.status))];
   const ais = [...new Set(state.projects.map((project) => project.leadAi))];
+  const locations = [...new Set(state.projects.map((project) => {
+    if (project.location?.includes("会計事務所PC")) return "会計事務所PC";
+    if (project.location?.includes("GitHub")) return "GitHub";
+    return project.location;
+  }).filter(Boolean))];
   const addOptions = (select, values) => {
     values.forEach((value) => {
       const option = document.createElement("option");
@@ -76,6 +83,7 @@ function populateFilters() {
 
   addOptions(elements.statusFilter, statuses);
   addOptions(elements.aiFilter, ais);
+  addOptions(elements.locationFilter, locations);
 }
 
 function visibleProjects() {
@@ -87,10 +95,13 @@ function visibleProjects() {
       project.status,
       project.leadAi,
       project.nextAction,
+      project.location,
     ].join(" ").toLocaleLowerCase("ja-JP").includes(query);
     const matchesStatus = state.status === "all" || project.status === state.status;
     const matchesAi = state.ai === "all" || project.leadAi === state.ai;
-    return matchesQuery && matchesStatus && matchesAi;
+    const matchesLocation = state.location === "all"
+      || project.location?.includes(state.location);
+    return matchesQuery && matchesStatus && matchesAi && matchesLocation;
   });
 }
 
@@ -117,6 +128,12 @@ function renderProjects() {
     card.querySelector(".project-summary").textContent = project.summary;
     card.querySelector(".project-lead").textContent = project.leadAi;
     card.querySelector(".project-next").textContent = project.nextAction;
+    const location = card.querySelector(".project-location");
+    location.textContent = project.location || "—";
+    if (project.location?.includes("バックアップ対象外")) {
+      location.classList.add("is-warning");
+      location.textContent = `⚠ ${project.location}`;
+    }
     const links = card.querySelector(".project-links");
     if (project.notionUrl) links.append(makeLink("Notion", project.notionUrl));
     if (project.githubUrl) links.append(makeLink("GitHub", project.githubUrl));
@@ -211,6 +228,10 @@ function registerInteractions() {
   });
   elements.aiFilter.addEventListener("change", (event) => {
     state.ai = event.target.value;
+    renderProjects();
+  });
+  elements.locationFilter.addEventListener("change", (event) => {
+    state.location = event.target.value;
     renderProjects();
   });
   elements.themeToggle.addEventListener("click", () => {
