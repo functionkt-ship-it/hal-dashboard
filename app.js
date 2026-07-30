@@ -248,7 +248,7 @@ function registerInteractions() {
 async function loadDashboard() {
   try {
     const [projectsResponse, toolsResponse] = await Promise.all([
-      fetch("projects.json"),
+      fetch(`projects.json?v=${Date.now()}`, { cache: "no-store" }),
       fetch("tools.json"),
     ]);
     if (!projectsResponse.ok || !toolsResponse.ok) throw new Error("設定ファイルを読み込めませんでした。");
