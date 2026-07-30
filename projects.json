@@ -6,58 +6,102 @@
       "status": "進行中",
       "leadAi": "Codex",
       "updatedAt": "2026-07-30",
-      "nextAction": "GitHub経由で各システムの更新を管理する",
-      "notionUrl": "https://app.notion.com/p/3ac69ed9820981f5bd65db739a57a5e8",
+      "nextAction": "プロジェクトカードにlocationを表示できるようにする",
       "githubUrl": "https://github.com/functionkt-ship-it/hal-dashboard",
-      "outputUrl": "index.html"
+      "outputUrl": "index.html",
+      "location": "GitHub"
     },
     {
-      "name": "請求フロー改善",
-      "summary": "提案書・様式・売掛回収アプリをまとめ、請求から回収確認までの流れを整備する。",
-      "status": "進行中",
-      "leadAi": "Claude",
-      "updatedAt": "2026-07-24",
-      "nextAction": "売掛回収WEBアプリの引き継ぎ内容を確認する",
-      "notionUrl": "https://app.notion.com/p/39569ed98209811a8ea7f34fbe8445a9?pvs=1"
-    },
-    {
-      "name": "法人くんアプリ",
-      "summary": "決算書をもとに経営状態を見える化し、改善のための処方箋を提示するアプリ。",
-      "status": "レビュー待ち",
-      "leadAi": "Claude",
-      "updatedAt": "2026-07-23",
-      "nextAction": "PDF読み取りの実機テストを実施する",
-      "notionUrl": "https://app.notion.com/p/37469ed9820981fe9866c63599c188ad?pvs=1"
-    },
-    {
-      "name": "CASH BOOK（現金出納帳）",
+      "name": "CASH BOOK（現金出納帳・公開版）",
       "summary": "ブラウザだけで動作し、JSONバックアップとCSV出力に対応する現金出納帳。",
       "status": "公開中",
       "leadAi": "Codex",
       "updatedAt": "2026-07-30",
-      "nextAction": "GitHubのIssueまたは修正依頼から改善する",
-      "notionUrl": "https://app.notion.com/p/37b69ed9820981a68e8efe291637cdff?pvs=1",
+      "nextAction": "事務所版との差分を確認し、正本を一本化する",
       "githubUrl": "https://github.com/functionkt-ship-it/cashbook",
-      "outputUrl": "https://functionkt-ship-it.github.io/cashbook/"
+      "outputUrl": "https://functionkt-ship-it.github.io/cashbook/",
+      "location": "GitHub"
     },
     {
-      "name": "MF会計風プロトタイプ",
+      "name": "現金出納帳システム（事務所版）",
+      "summary": "ブラウザ単体で動作する現金出納帳。外部依存なし、localStorage保存。",
+      "status": "稼働中",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-30",
+      "nextAction": "公開版CASH BOOKとの差分を確認し、正本を一本化する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "医療法人等所得金額計算書アプリ",
+      "summary": "法人事業税の所得配分方式（別記第3号様式その2・2026.1改正）に対応した単体HTML。様式定義ブロックの差し替えで改定対応できる設計。",
+      "status": "稼働中",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-27",
+      "nextAction": "定位置へ移動し、非公開リポジトリへ移行する（同フォルダの実データJSONは除外）",
+      "location": "会計事務所PC（デスクトップ・バックアップ対象外）"
+    },
+    {
+      "name": "経営状態可視化アプリ",
+      "summary": "決算書PDFを読み取り、経営状態の可視化と改善処方を提示する。APIキーは利用者が入力。",
+      "status": "レビュー待ち",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-30",
+      "nextAction": "PDF読み取りの実機テストを実施する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "売掛回収予定システム",
+      "summary": "会計システムの出力を取り込み、旬別の回収予定入力と担当者別・部課別の予実管理を行う。",
+      "status": "試作v0.2・要サニタイズ",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-30",
+      "nextAction": "ソース内の実データを架空値へ差し替えてから非公開リポジトリへ移行する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "クライアントA 仕訳変換システム",
+      "summary": "業務システムのCSV出力をMoneyForward仕訳帳形式へ変換する単体HTML。",
+      "status": "稼働中",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-30",
+      "nextAction": "非公開リポジトリへ移行する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "請求フロー改善",
+      "summary": "請求から回収確認までの社内フローを整備する。詳細は非公開台帳を参照。",
+      "status": "進行中",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-24",
+      "nextAction": "非公開台帳を確認する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "会計入力プロトタイプ",
       "summary": "仕訳入力・帳簿・試算表・決算書をブラウザで確認できる会計入力プロトタイプ。",
-      "status": "公開中",
+      "status": "非公開へ移行予定",
       "leadAi": "Codex",
       "updatedAt": "2026-07-30",
-      "nextAction": "GitHubのIssueまたは修正依頼から改善する",
-      "githubUrl": "https://github.com/functionkt-ship-it/mf-accounting-prototype",
-      "outputUrl": "https://functionkt-ship-it.github.io/mf-accounting-prototype/"
+      "nextAction": "非公開リポジトリへ移行後、再リンクする",
+      "location": "GitHub"
     },
     {
-      "name": "合同会社ハイタッチ 3店舗目損益シミュレーション",
-      "summary": "10月の3店舗目展開に向け、売上・人件費・固定費を踏まえた損益を試算する。",
-      "status": "保留",
-      "leadAi": "ChatGPT",
-      "updatedAt": "2026-07-12",
-      "nextAction": "前提数値を確認してシミュレーションを更新する",
-      "notionUrl": "https://app.notion.com/p/39169ed982098173a0e6c20c40be9ef4?pvs=1"
+      "name": "車両管理システム",
+      "summary": "設計書のみ作成済み。実装ファイルは未作成。",
+      "status": "設計のみ",
+      "leadAi": "Claude",
+      "updatedAt": "2026-07-30",
+      "nextAction": "実装に着手するか、着手しないかを判断する",
+      "location": "会計事務所PC（Drive）"
+    },
+    {
+      "name": "放課後等デイサービス未収金管理システム",
+      "summary": "引き継ぎ文書のみ。実装ファイルは未作成。",
+      "status": "設計のみ",
+      "leadAi": "Codex",
+      "updatedAt": "2026-07-30",
+      "nextAction": "引き継ぎ内容を確認し、実装可否を判断する",
+      "location": "会計事務所PC（Drive）"
     }
   ]
 }
